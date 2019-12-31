@@ -13,5 +13,5 @@ const artifactsDir = path.join(__dirname, 'build', 'artifacts');
 mkdirp.sync(artifactsDir);
 fs.writeFileSync(path.join(__dirname, 'build', 'build.json'), JSON.stringify({
 	bytecode: addHexPrefix(fs.readFileSync(path.join(artifactsDir, 'sol_ViewExecutor_sol_ViewExecutor.bin'), 'utf8')),
-  src: fs.readFileSync(path.join(__dirname, 'sol', 'ViewExecutor.sol'))
+  src: fs.readFileSync(path.join(__dirname, 'sol', 'ViewExecutor.sol'), 'utf8')
 }, null, 1))
